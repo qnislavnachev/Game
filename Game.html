@@ -1,0 +1,27 @@
+<script>
+    function followCursor(event) {
+        let element = document.getElementById("image");
+        element.style.left = event.pageX;
+        element.style.top = event.pageY;
+    }
+</script>
+
+<style>
+    #image {
+        position: absolute;
+        text-align: center;
+    }
+
+    #game-space {
+        width: 1000px;
+        height: 1000px;
+        border: 1px solid black;
+    }
+</style>
+
+<html lang="en">
+    <body>
+        <div id="game-space" onmousemove="followCursor(event)"></div>
+        <p id="image">image here</p>
+    </body>
+</html>
